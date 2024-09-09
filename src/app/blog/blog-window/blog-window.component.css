@@ -1,0 +1,15 @@
+.container {
+    padding-left: 5px;
+}
+
+
+.BlogCard {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    width: 60%;
+    overflow: hidden;
+    border: solid 1px black;
+}

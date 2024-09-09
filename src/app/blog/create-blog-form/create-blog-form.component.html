@@ -1,0 +1,16 @@
+
+<div class="formContainer">
+    <form class="Form" (ngSubmit)="submitForm()" > 
+    
+        <label for="Title">Title</label>
+        <input id="Title"  type="text" required  name="title" [(ngModel)]= "title" >
+        <br>
+        <label for="Description">Description</label>
+        <input id="Description"  type="text" required name="Description" [(ngModel)] = "Description" >
+        <br>
+        <label for="private">private</label>
+        <input id="private" type="checkbox" name="private" id="private" required [(ngModel)] = "private">
+        <br>
+        <button type="submit">Submit Form</button>
+    </form>
+</div>

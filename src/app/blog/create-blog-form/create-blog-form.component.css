@@ -1,0 +1,21 @@
+.formContainer{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+
+}
+
+input{
+    margin: 5px;
+}
+
+.Form {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 70px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}

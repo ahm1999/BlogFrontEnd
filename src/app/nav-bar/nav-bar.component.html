@@ -1,0 +1,28 @@
+<nav>
+    <a class="title" routerLink="/" routerLinkActive="active">BlogFrontend</a>
+    <div>
+        <ul>
+            <li><a routerLink="/" routerLinkActive="active">home</a></li>
+            <li><a routerLink="/blogs" routerLinkActive="active">All Blogs</a></li>
+            <li *ngIf="loggedIn" >
+                <button type="button" (click)="LogOut()">Log Out</button>
+            </li>
+            <li *ngIf="!loggedIn" >
+            <a routerLink="/auth/signup" routerLinkActive="active">signup</a>
+            </li>
+            <li *ngIf="!loggedIn">
+                <a routerLink="/auth/login" routerLinkActive="active">log in</a>
+            </li>
+            
+            
+            
+        
+            
+            
+            
+        
+        </ul>
+    </div>
+   
+</nav>
+<div class="navBarfiller" style="height:4rem  ;"></div>

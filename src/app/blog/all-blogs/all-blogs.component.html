@@ -1,0 +1,13 @@
+<div class="container">
+
+
+<ul>
+    <li *ngIf="loggedIn" ><a routerLink="CreateBlog">Create Blog</a></li>
+    <li><a routerLink="/blogs">all-blogs</a></li>
+</ul>
+<div class="childContainer">
+    <router-outlet></router-outlet>
+
+</div>
+
+</div>

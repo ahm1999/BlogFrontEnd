@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0%;
+}
+
+body {
+
+    font-family:  'Arial Narrow', Arial, sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    height: 100vh;           /* Ensure the container has a height if it's not already set */
+  }
+
+  .selfCenter {
+    position: absolute;  /* Required for the transform to work correctly */
+    top: 50%;            /* Move the element down 50% of its container's height */
+    left: 50%;           /* Move the element right 50% of its container's width */
+    transform: translate(-50%, -50%); /* Offset the element by 50% of its width and height */
+  }
+
+  

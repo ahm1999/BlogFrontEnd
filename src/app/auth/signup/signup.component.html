@@ -1,0 +1,29 @@
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" class="LoginForm">
+
+        <div class="inputContainer">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name"  [(ngModel)] = "name">
+    
+        </div>
+
+        <div class="inputContainer">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email"  [(ngModel)] = "email">
+
+        </div>
+        
+        <div class="inputContainer">
+        <label for="password">password</label>
+        <input id="password"  type="password" name="password" [(ngModel)] = "password">
+        </div>
+
+        <div class="ErrorMessage">
+            {{errorMassege}}
+        </div>
+        
+        
+        <button type="submit">Log In</button>
+    </form>
+</div>

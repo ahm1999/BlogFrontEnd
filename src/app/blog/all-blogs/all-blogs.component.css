@@ -1,0 +1,31 @@
+ul{
+    
+    list-style-type: none;
+    background-color: rgb(48, 45, 45);
+    width: 15%;
+    height: fit-content;
+    text-align: center;
+    padding: 5px;
+}
+li {
+    
+    height: 2rem;
+    justify-content: center;
+    align-content: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding: 5px;
+    display: flex;
+    height: 100%;
+}
+.childContainer {
+    margin-left: 5px;
+    padding-left: 5px;
+    width: 90%;
+    height: 100%;
+}
