@@ -20,6 +20,10 @@ export class BlogService {
 
   }
 
+  GetBlogById(BlogId:string){
+    return this.http.get(this.Url+`api/Blog/data/${BlogId}`)
+  }
+
 
   CreateBlog(title:string,Description:string,personal:boolean):BehaviorSubject<Object>{
     let response = new BehaviorSubject({});

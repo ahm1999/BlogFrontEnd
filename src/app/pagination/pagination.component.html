@@ -1,1 +1,13 @@
-<p>pagination works!</p>
+
+<!-- <app-button *ngFor="let x of numberArray;let i = index" [index]="i" >
+
+</app-button> -->
+
+
+
+@for (item of numberArray; track $index) {
+
+ <button (click)="clickButton($index)" >  
+        {{$index}} 
+</button>
+}

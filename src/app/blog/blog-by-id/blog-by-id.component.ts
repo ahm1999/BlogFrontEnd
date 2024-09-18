@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BlogService } from '../../Services/blog.service';
+import { PostsServiceService } from '../../Services/posts-service.service';
+import { Post } from '../../Post/allposts/allposts.component';
 
 @Component({
   selector: 'app-blog-by-id',
@@ -8,12 +11,53 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './blog-by-id.component.html',
   styleUrl: './blog-by-id.component.css'
 })
-export class BlogByIdComponent {
+export class BlogByIdComponent implements OnInit{
 
 
 blogId = ''  
-constructor(route :ActivatedRoute){
-  this.blogId = route.snapshot.params["blogId"]
+blogTitle = ''
+blogDescription = ''
+creatorName = ''
+Posts!:Post[]
+personal :boolean =false
+constructor(private route :ActivatedRoute,private blogService:BlogService ,private postService:PostsServiceService){
 }
+  ngOnInit(): void {
+    this.blogId = this.route.snapshot.params["blogId"]
+
+        this.blogService.GetBlogById(this.blogId).subscribe(
+          {
+            next:(value:any)=>{
+              console.log(value);
+              
+              this.blogTitle = value.bLogTitle
+              this.blogDescription = value.blogDesctiption
+              this.creatorName = value.creatorName
+              this.personal = value.personal
+    
+              
+            },
+            error:(error) =>{
+              console.log(error);
+              
+            }
+          }
+        )
+
+
+      this.postService.getBlogPosts(this.blogId).subscribe(
+        (value :any) =>{
+          console.log(this.Posts);
+          this.Posts = value
+        }
+      ) 
+      
+    
+  }
+  
+
+
+
+
 
 }

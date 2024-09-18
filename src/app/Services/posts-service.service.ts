@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsServiceService {
   url:string = this.urlService.getUrl();
+
+
   constructor(private urlService :BackendUrlService,private http:HttpClient) { }
 
   getPost(page:Number){
@@ -16,5 +18,13 @@ export class PostsServiceService {
   getPostById(id:string){
     return this.http.get(this.url+`Posts/${id}`)
 
+  }
+
+  getPostCount(){
+    return this.http.get(this.url+`Posts/Count`)
+  }
+
+  getBlogPosts(blogId:string){
+    return this.http.get(this.url+`Posts/Blog/${blogId}`)
   }
 }

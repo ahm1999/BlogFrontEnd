@@ -2,3 +2,7 @@
 <app-post-link *ngFor="let post of postArray"  [post]="post" ></app-post-link>
 
 </div>
+<div>
+    <app-pagination [Count]="postCount" (currentPage)="changePage($event)" ></app-pagination>
+
+</div>

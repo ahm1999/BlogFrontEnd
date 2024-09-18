@@ -1,1 +1,8 @@
-<p>blog-by-id works! {{blogId}}</p>
+
+<h3>{{blogTitle}}</h3>
+<h5>by : {{creatorName}}</h5>
+<p>{{blogDescription}}</p>
+
+@if (personal) {
+    <p style="color: red;">this is a personal blog</p>
+}
